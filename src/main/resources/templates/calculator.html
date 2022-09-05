@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+<form method="post" action="/calculator">
+    <p>Первое число:</p>
+    <input name="num1" type="number" step="any">
+    <p>Второе число:</p>
+    <input name="num2" type="number" step="any">
+    <p>Действие:
+    <select name="operation">
+        <option value="+"> + </option>
+        <option value="-"> - </option>
+        <option value="*"> * </option>
+        <option value="/"> / </option>
+    </select>
+    </p>
+    <input type="submit" value="Отправить с помощью post">
+    <p/>
+</form>
+<br/>
+<form method="get" action="/calculator">
+    <p>Первое число:</p>
+    <input name="num1" type="number" step="any">
+    <p>Второе число:</p>
+    <input name="num2" type="number" step="any">
+    <p>Действие:
+        <select name="operation">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+        </select>
+    </p>
+    <input type="submit" value="Отправить c помощью get">
+    <p/>
+    <p th:text = "${result}"/>
+</form>
+</body>
+</html>
